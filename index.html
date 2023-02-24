@@ -1,41 +1,82 @@
-<html lang=“zh-CN”><head>
-	<head>
+<!DOCTYPE html>
+<html lang="“zh-CN”"><head>
 		<meta charset="utf-8">
 		<title>First,and Best</title>
 		<link rel="stylesheet" href="CSS\main.css">
 		<style type="text/css">
-	   body{margin: 50px 100px;}
-	   .a{text-decoration: none;padding: 15px 20px;background: green;font-size: 25px;border-radius: 10px;color: white;}
+	   		body{margin: 50px 100px;}
+	   			.a{text-decoration: none;padding: 15px 20px;background: green;font-size: 25px;border-radius: 10px;color: white;}
+			p.center
+			{
+				ine-height: 200px;/*垂直居中关键*/
+
+text-align:center;
+
+height: 200px;
+
+font-size: 36px;
+
+			}
+			.center{
+				/* ine-height: 200px;垂直居中关键 */
+
+text-align:center;
+
+/* height: 200px;
+
+font-size: 36px; */
+			}
+			
 	  </style>
-	</head>
+	  <script >
+		function xiangyinshi (){
+        var one=document.querySelector('.one')
+        var two=document.querySelector('.two')
+        window.addEventListener('resize',function(){
+            console.log('宽'+window.innerWidth);
+            console.log('高'+window.innerHeight);
+            if(window.innerWidth<900){
+                one.children[0].style.display='none'
+                two.children[0].style.display='none'
+            }
+            if(window.innerWidth>900){
+                one.children[0].style.display='block'
+                two.children[0].style.display='block'
+            }
+        })}
+    </script>
+	  <link rel="icon" href="/logo.ico">
+	  <div></div>
+	<input type="hidden" id="_w_simile" data-inspect-config="3"><script type="text/javascript" src="chrome-extension://odphnbhiddhdpoccbialllejaajemdio/scripts/inspector.js"></script><link rel="prefetch" href="https://scoreghl.github.io/%E2%80%9Cindex.html%E2%80%9D"><link rel="prefetch" href="https://scoreghl.github.io/%E2%80%9Cclean.html%E2%80%9D"><link rel="prefetch" href="https://scoreghl.github.io/%E2%80%9C%E2%80%9D"></head>
 <body>
-	<div class=“bg-img”></div>
+	<div class="bg-img"></div>
 	<header><i>你好</i></header>
+	
+
 	<main>
-		<h1>这里是<a href="https://space.bilibili.com/3493090671200775?spm_id_from=333.1007.0.0" target="_blank">SYSTEM-ScoreGao</a>的个人网站</h1>
-		<div class=“bg-img”></div>
-		<h1>
-关于我<br>
-		</h1>
+		<h1 class="center">这里是<a href="https://space.bilibili.com/3493090671200775?spm_id_from=333.1007.0.0" target="_blank">SYSTEM-ScoreGao</a>的个人网站</h1>
+		<div class="bg-img"></div>
+		<h1 class="center">关于我<br></h1>
 		<p>
-			<small>我是</small><b><strong><a href="https://space.bilibili.com/3493090671200775?spm_id_from=333.1007.0.0" target="_blank">SYSTEM-ScoreGao</a></strong></b>
+			<p ><small>我是</small><b><strong><a href="https://space.bilibili.com/3493090671200775?spm_id_from=333.1007.0.0" target="_blank">SYSTEM-ScoreGao</a></strong></b></p>
 			<br>出生于<strong>中华人民共和国</strong></p>
 		<p><br>强迫症，懒癌晚期，拖延症，白日梦想家</p>
 		<p>已经度过了快乐的小学六年<br>
-            <p>目前正读初中</p>
+            </p><p>目前正读初中</p>
 			<br>在今年参加了CSP-J1（未通过）<br>
-明年再来！</p>
+明年再来！<p></p>
 		<p>
 我的作品：<br><br>
-			<a href=index.html class=“a”>First and best</a> <a href=clean.html class=“a”>一键清理</a><br>
-			<BR></p>
-		<p><a href=“” target=“_blank” class=“a”></a>  
+			<a href="index.html" class="a">First and best</a> <a href="clean.html" class="a">一键清理</a><br>
+			<br></p>
+		<p>  
 		  <!-- <a href=“soft\soft.html” target=“_blank” class=“a”>软件仓库</a> --></p>
 		<p><small>/*网站正在开发中，<br>
 			<i><del>这可能需要几个世纪</del></i>
 			<br>您可以用电子邮件联系我<br>电子邮件：
 			<strong>cctscore@126.com</strong>或<br>
-			<strong>cctscoreghl@hotmail.com</strong>>*/</small>></P>
+			<strong>cctscoreghl@hotmail.com</strong>&gt;*/</small>&gt;</p>
 		<!--<img src=“https://i.postimg.cc/Yq8Rjkk2/Dingtalk-20221121181549.jpg” alt=“钉钉-20221121181549”/>-->
-</p></main>
+<p></p></main>
+
 </body></html>
