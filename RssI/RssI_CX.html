@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机点名 Cloud X</title>
+    <link rel="stylesheet" href="./CSS/main.d.l.css">
+    <link rel="icon" href="./CSS/small.ico">
+    <script>
+        var random,aup,aup1,aup2;
+        function randomNum(minNum,maxNum){ 
+            switch(arguments.length){ 
+                case 1: 
+                    return parseInt(Math.random()*minNum+1,10); 
+                break; 
+                case 2: 
+                    return parseInt(Math.random()*(maxNum-minNum+1)+minNum,10); 
+                break; 
+                    default: 
+                        return 0; 
+                    break; 
+            } 
+        }       
+        function for_()
+        {
+            random= randomNum(1,60);
+            document.getElementById("0").innerHTML = "请学号为"+random+"号的同学起立";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <p class="center"><strong class="big">随机点名 Cloud X</strong></p>
+    </header>
+    <p id="0" class="pc" style="font-size: 3rem;" ><strong></strong></p>
+    <button style="display:block;margin:0 auto; width:150px; height:45px; font-size: larger;" class="btn1" onclick="for_()" id="button">点击以开始</button>
+    <p  class="footer center" style="font-size: larger;">Copyright © 2023 高浩朗，All rights reserved.</p>
+</body>
+</html>
