@@ -1,14 +1,24 @@
+@font-face {
+    font-family: "PingFangSC-Light";
+    src: url("./Font-Faiml/PingFangSC4.otf") format('truetype');
+}
 .big
 {
     font-size: 50px;
+}
+*
+{
+    font-family: "PingFangSC-Light";
 }
 .center{
  ine-height: 200px;
 
 text-align:center;
 
- height: 200px;
-
+ /* height: 200px; */
+/* font-family: "PingFang SC";
+ */
+ /* font-family: PingFangSC-Regular, sans-serif; */
 font-size: 36px; 
 }
 .pc
@@ -19,7 +29,7 @@ font-size: 36px;
     
      /* height: 200px; */
     
-    /* font-size: 36px;  */
+    font-size: 36px; 
 }
 .footer {
     position: fixed;
