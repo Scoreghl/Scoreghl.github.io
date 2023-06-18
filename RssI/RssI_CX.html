@@ -1,46 +1,189 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>随机点名 Cloud X</title>
-    <link rel="stylesheet" href="./CSS/main.d.l.css">
-    <link rel="icon" href="./CSS/small.ico">
-    <script>
-        var random,aup,aup1,aup2;
-        function randomNum(minNum,maxNum){ 
-            switch(arguments.length){ 
-                case 1: 
-                    return parseInt(Math.random()*minNum+1,10); 
-                break; 
-                case 2: 
-                    return parseInt(Math.random()*(maxNum-minNum+1)+minNum,10); 
-                break; 
-                    default: 
-                        return 0; 
-                    break; 
-            } 
-        }
-        function for_()
-        {
-            random= randomNum(1,60);
-            if (random>=1&&random<10) {
-                aup="请学号为"+' '+random+'\u0020'+"号的同学起立";
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta name="renderer" content="webkit">
+		<meta name="robots" content="noindex">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>随机点名 Cloud X</title>
+		<link rel="canonical" href="https://limestart.cn/">
+		<link rel="shortcut icon" href="https://limestart-assets.retiehe.com/Lime_Logo.png">
+		<style>
+            @font-face {
+                font-family: "PingFangSC-Light";
+                src: url("./Font-Faiml/PingFangSC4.otf") format('truetype');
             }
-            else if (random>=10&&random<100) {
-                aup="请学号为"+'\u0020'+random+'\u0020'+"号的同学起立";
-            }
-            document.getElementById("0").innerHTML = aup;
-            // document.getElementById("0").innerText = "aup=请学号为+'\u0020'+random+'\u0020'+号的同学起立;  \n document.getElementById(0).innerHTML = aup;";
-        }
-    </script>
-</head>
-<body>
-    <h1><p id="pup1" class="center big" style="height: calc(21vh); font-size: 4rem;">随机点名 Cloud X</p></h1>
-    <!-- <div id="0" style=""></div> -->
-    <p id="0" class="pc" style="font-size: 3rem; height: calc(20vh)" ><strong></strong></p>
-    <button style="display:block;margin:0 auto; width:150px; height:45px; font-size: larger;" class="btn1 btn" onclick="for_()" id="button">点击以开始</button>
-    <p  class="footer center" style="font-size: larger; ">© 2023 <strong >高浩朗</strong> 版权所有，保留所有权利</p>
-</body>
+			* {
+				box-sizing: border-box;
+                font-family: "PingFangSC-Light";
+			}
+			html {
+				height: 100%;
+			}
+			body {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 100%;
+				max-width: 100%;
+				overflow: hidden;
+				margin: 0;
+				font-family: "PingFang SC", "Microsoft Yahei", "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+				background-color: #F5F5F5;
+				cursor: default;
+				-webkit-tap-highlight-color: transparent;
+				-webkit-user-select: none;
+				user-select: none;
+			}
+			a {
+				color: inherit;
+				text-decoration: none;
+				transition: .25s;
+			}
+			a:active {
+				filter: brightness(.8) !important;
+			}
+			main {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				width: 650px;
+				height: 500px;
+				padding: 50px;
+				text-align: center;
+				background-color: white;
+				border-radius: 15px;
+				box-shadow: rgba(0,0,0,.05) 0 10px 30px;
+				overflow: hidden;
+			}
+			main a {
+				color: #70C000;
+			}
+			main a:hover {
+				filter: brightness(1.1);
+			}
+			.logoContainer {
+				flex-shrink: 0;
+				margin: 0 auto;
+				width: 60px;
+				height: 60px;
+				background-size: contain;
+				background-image: url("./CSS/small.ico");
+			}
+			.selectable {
+				cursor: auto;
+				-webkit-tap-highlight-color: initial;
+				-webkit-user-select: text;
+				user-select: text;
+			}
+			.contentContainer {
+				text-align: left;
+				overflow-y: auto;
+			}
+			h2 {
+				margin: 10px 0 0 0;
+				font-size: 14px;
+			}
+			.center {
+				text-align: center !important;
+			}
+			.content {
+				color: rgba(0,0,0,.8);
+				font-size: 14px;
+				line-height: 1.75;
+				margin: 10px 0;
+			}
+			.indent {
+				text-indent: 40px;
+			}
+			footer {
+				position: fixed;
+				bottom: 35px;
+				text-align: center;
+				font-size: 12px;
+				color: rgba(0,0,0,.6);
+			}
+			footer a:hover {
+				color: #70C000;
+			}
+			::-webkit-scrollbar {
+				width: 5px;
+			}
+			::-webkit-scrollbar-thumb {
+				background-color: rgba(0,0,0,.1);
+				border-radius: 3px;
+			}
+			::-webkit-scrollbar-thumb:hover {
+				background-color: rgba(0,0,0,.2);
+			}
+			::-webkit-scrollbar-thumb:active {
+				background-color: #70C000;
+			}
+			@media screen and (max-width: 700px) {
+				main {
+					width: calc(100% - 60px);
+				}
+			}
+			@media screen and (max-width: 550px) {
+				h1 {
+					font-size: 24px;
+				}
+				main {
+					padding-left: 35px;
+					padding-right: 35px;
+				}
+			}
+			@media screen and (max-width: 450px) {
+				main {
+					width: calc(100% - 30px);
+					padding-left: 25px;
+					padding-right: 25px;
+				}
+			}
+			@media screen and (max-height: 680px) {
+				footer {
+					bottom: 20px;
+				}
+				main {
+					height: calc(100% - 120px);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<div class="logoContainer"></div>
+			<h1>我们已迁移至新的网址</h1>
+			<div class="contentContainer selectable">
+				<h2>为什么会出现此页面？</h2>
+				<div class="content indent">随机点名 Cloud X已迁移至全新的网址 <code><a href="https://rssicx.github.io/" target="_blank">RssICX.github.io</a></code>，您正在访问的网址已停用。</div>
+				<h2>我应该怎么做？</h2>
+				<div class="content">
+					<ul>
+						<li>请访问 <code><a href="https://rssicx.github.io/" target="_blank">https://RssICX.github.io/</a></code>以继续使用 随机点名 Cloud X</li>
+					</ul>
+				</div>
+				<h2 class="center">很抱歉给您带来不便！</h2>
+			</div>
+		</main>
+		<footer>
+			&copy; 2023 高浩朗 丨 <a href="https://rssicx.github.io/">随机点名 Cloud X</a>
+		</footer>
+		<script>
+			oncontextmenu = function() {
+				return false;
+			};
+			history.replaceState(null, null, "/");
+			if (navigator.serviceWorker) {
+				navigator.serviceWorker.getRegistrations().then(function(registrations) {
+					for (var i = 0; i < registrations.length; i++) {
+						registrations[i].unregister();
+					}
+				});
+			}
+			if (/bot|spider/i.test(navigator.userAgent)) {
+				location.href = "https://rssicx.github.io/";
+			}
+		</script>
+	</body>
 </html>
